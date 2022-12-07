@@ -1,6 +1,5 @@
 .blog-hero {
   padding: 24px 0 120px;
-  margin-top: 114px;
   font-family: Gotham, sans-serif;
 
   &__inner {
@@ -30,12 +29,20 @@
 .blog-popular {
   padding-bottom: 120px;
 
+  @include d(992) {
+    padding-bottom: 80px;
+  }
+
   &__title {
     h2 {
       font-size: 40px;
       font-family: Gotham, sans-serif !important;
       font-weight: 700;
       margin-bottom: 32px;
+
+      @include d(860) {
+        font-size: 30px;
+      }
     }
   }
 
@@ -391,7 +398,11 @@
 }
 
 .blog-topics {
-  padding: 120px 0 130px;
+  padding: 120px 0 0 0;
+
+  @include d(992) {
+    padding: 80px 0 0 0;
+  }
 
   &__title {
     h2 {
@@ -399,6 +410,10 @@
       font-family: Gotham, sans-serif !important;
       font-weight: 700;
       margin-bottom: 32px;
+
+      @include d(860) {
+        font-size: 30px;
+      }
     }
   }
 
@@ -407,6 +422,14 @@
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 105px;
+
+    @include d(1280) {
+      margin-bottom: 80px;
+    }
+
+    @include d(992) {
+      margin-bottom: 40px;
+    }
 
     a {
       margin-bottom: 16px;
@@ -419,9 +442,113 @@
       line-height: 1.05em;
       background-color: #F6FAFE;
 
+      @include d(992) {
+        font-size: 16px;
+        padding: 10px 12px;
+      }
+
       &:not(:last-child) {
         margin-right: 32px;
       }
     }
+  }
+}
+
+.blog-cta {
+  padding-bottom: 130px;
+
+  @include d(1280) {
+    padding-bottom: 80px;
+  }
+
+  @include d(992) {
+    padding-bottom: 60px;
+  }
+
+  &__inner {
+    background-color: #003375;
+    text-align: center;
+    padding: 64px 15px 80px 15px;
+    border-radius: 32px;
+
+    h3 {
+      color: #fff;
+      font-size: 36px;
+      line-height: 1.35em;
+      font-family: Gotham, sans-serif !important;
+      max-width: 930px;
+      margin: 0 auto 24px auto;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.4em;
+      color: #fff;
+      font-family: Gotham, sans-serif !important;
+      max-width: 740px;
+      margin: 0 auto 40px auto;
+    }
+  }
+
+  &__btns {
+
+    .btn {
+
+      &:not(:last-child) {
+        margin-right: 16px;
+
+        @include d(575) {
+          margin-right: 0px;
+          margin-bottom: 16px;
+        }
+      }
+
+      @include d(575) {
+        display: block;
+
+      }
+    }
+  }
+}
+
+.btn {
+  height: 48px;
+  line-height: 44px;
+  border: 2px solid transparent;
+  padding: 0 18px;
+  text-align: center;
+  border-radius: 8px;
+  color: #fff;
+  display: inline-block;
+  font-weight: 700;
+  font-family: Gotham, sans-serif !important;
+  transition: color .4s ease, background-color .4s ease, border-color .4s ease;
+
+  &_lg {
+    padding: 0 35px;
+  }
+
+  &_primary {
+    background-color: #DA5D03;
+
+    &:hover {
+      background-color: #fff;
+      color: #DA5D03;
+    }
+  }
+
+  &_border-white {
+    background-color: transparent;
+    border-color: #fff;
+
+    &:hover {
+      background-color: #DA5D03;
+      border-color: #DA5D03;
+      color: #fff;
+    }
+  }
+
+  @include d(992) {
+    font-size: 16px;
   }
 }
