@@ -15,6 +15,15 @@
 }
 
 @font-face {
+  font-family: Gotham;
+  font-display: swap;
+  src: url(../fonts/Gotham-Medium.woff) format("woff"), url(../fonts/Gotham-Bold.woff2) format("woff2");
+  font-weight: 500;
+  font-style: normal
+}
+
+
+@font-face {
   font-family: Kamerik;
   font-display: swap;
   src: url(../fonts/Kamerik105.woff) format("woff"), url(../fonts/Kamerik105.woff2) format("woff2");
