@@ -14,8 +14,19 @@
     padding: 40px 0;
     border-bottom: 1px solid #475467;
 
+    @include d(768) {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
     &__content {
       margin-right: 15px;
+
+      @include d(768) {
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
 
       p {
         font-size: 20px;
@@ -29,13 +40,31 @@
     }
 
     &__form {
+      @include d(575) {
+        width: 100%;
+      }
+
       form {
         width: 400px;
         display: flex;
         align-items: center;
 
+        @include d(575) {
+          width: 100%;
+        }
+
+        @include d(575) {
+          flex-direction: column;
+        }
+
         label {
           margin-right: 16px;
+
+          @include d(575) {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 16px;
+          }
 
           input {
             padding: 10px 14px;
@@ -48,6 +77,10 @@
             height: 44px;
             border-radius: 8px;
             border: none;
+
+            @include d(575) {
+              width: 100%;
+            }
 
             &::placeholder {
               font-size: 16px;
@@ -66,6 +99,10 @@
           font-weight: 400;
           font-size: 14px;
           height: 40px;
+
+          @include d(575) {
+            height: 44px;
+          }
         }
       }
     }
@@ -75,17 +112,58 @@
     padding: 70px 0;
     position: relative;
 
+    @include d(992) {
+      padding: 50px 0 20px;
+    }
+
     &__row {
       display: flex;
 
+      @include d(992) {
+        flex-wrap: wrap;
+      }
     }
 
     &__col {
       margin-right: 50px;
 
+      @include d(1280) {
+        margin-right: 30px;
+      }
+
+      @include d(992) {
+        flex: 0 0 25%;
+        margin-right: 0;
+        padding-right: 15px;
+        margin-bottom: 40px;
+      }
+
+      @include d(768) {
+        flex: 0 0 50%;
+      }
+
+      @include d(420) {
+        flex: 0 0 100%;
+      }
+
       &:first-child {
         max-width: 278px;
         margin-right: 80px;
+
+        @include d(1280) {
+          margin-right: 30px;
+        }
+
+        @include d(992) {
+          max-width: 50%;
+          flex: 0 0 50%;
+          order: 1;
+        }
+
+        @include d(575) {
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
 
         p {
           font-size: 18px;
@@ -105,6 +183,18 @@
     }
   }
 
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    h4 {
+      text-transform: none;
+      margin-bottom: 0;
+    }
+
+  }
+
   &-bottom {
     display: flex;
     align-items: center;
@@ -112,7 +202,16 @@
     padding: 24px 0;
     border-top: 1px solid #475467;
 
+    @include d(768) {
+      flex-direction: column;
+    }
+
     &__content {
+      @include d(768) {
+        margin-top: 32px;
+        order: 1;
+      }
+
       p {
         color: #F8F8F8;
         margin-bottom: 16px;
@@ -147,6 +246,12 @@
       align-items: center;
 
       a {
+        svg {
+          width: 24px;
+          height: 24px;
+          fill: #f8f8f8;
+        }
+
         &:not(:last-child) {
           margin-right: 24px;
         }
@@ -178,4 +283,10 @@
   position: absolute;
   bottom: 80px;
   right: 0;
+
+  @include d(575) {
+    position: static;
+    margin: 0 auto;
+    display: block;
+  }
 }

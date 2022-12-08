@@ -20,6 +20,7 @@
     font-size: 18px;
     color: #4896EC;
     margin-bottom: 32px;
+    text-align: center;
     font-weight: 700;
     line-height: 1.05em;
     font-family: Gotham, sans-serif;
@@ -134,7 +135,7 @@
 
       .blog-card {
         &__img {
-          height: 192px;
+          height: 220px;
 
           @include d(992) {
             height: 340px;
@@ -188,7 +189,7 @@
 
       .blog-card {
         &__img {
-          height: 192px;
+          height: 220px;
 
           @include d(992) {
             height: 340px;
@@ -320,6 +321,19 @@
 .blog-posts {
   background-color: #F8F8F8;
   padding: 64px 0 53px;
+
+  &__title {
+    h2 {
+      font-size: 40px;
+      font-family: Gotham, sans-serif !important;
+      font-weight: 700;
+      margin-bottom: 32px;
+
+      @include d(860) {
+        font-size: 30px;
+      }
+    }
+  }
 
   &__filter {
     display: flex;
@@ -550,5 +564,327 @@
 
   @include d(992) {
     font-size: 16px;
+  }
+
+  &_download {
+    border-radius: 7px;
+    max-width: 135px;
+  }
+}
+
+.breadcrumbs {
+  margin-top: 40px;
+  padding-bottom: 20px;
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    li {
+      margin-bottom: 16px;
+      position: relative;
+      line-height: 20px;
+      font-weight: 700;
+
+      &:not(:last-child) {
+        padding-right: 12px;
+        margin-right: 24px;
+
+        &::after {
+          content: "/";
+          position: absolute;
+          right: -12px;
+          color: #D0D5DD;
+        }
+      }
+
+      &.active {
+        a {
+          color: #4896EC;
+        }
+      }
+
+      a {
+        color: #667085;
+      }
+    }
+  }
+}
+
+.blog-hero__article {
+  padding: 30px 0 65px 0;
+
+
+
+  &-inner {
+    text-align: center;
+
+    h1 {
+      color: #24336A;
+      font-family: Gotham, sans-serif !important;
+      max-width: 1100px;
+      margin: 0 auto;
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5em;
+      color: #003375;
+      margin-bottom: 40px;
+    }
+  }
+
+}
+
+.blog-hero__tags {
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+.tag {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 2px 10px;
+  text-align: center;
+  border-radius: 16px;
+  margin-bottom: 8px;
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &_blue {
+    background-color: #E9F1FA;
+    color: #4896EC;
+  }
+
+  &_orange {
+    background-color: #F8EBE2;
+    color: #DA5D03;
+  }
+}
+
+.table-of-content {
+  padding-bottom: 34px;
+  border-bottom: 1px solid #EAECF0;
+  margin-bottom: 85px;
+
+  h4 {
+    color: #003375;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Gotham, sans-serif !important;
+  }
+
+  &-list {
+    margin: 16px 0;
+
+    li {
+      position: relative;
+      padding-left: 20px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+
+      &::before {
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #6B7C91;
+        position: absolute;
+        top: 10px;
+        left: 6px;
+        transition: background-color .4s ease;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+
+      &.active {
+        &::before {
+          background-color: #DA5D03;
+        }
+
+        a {
+          color: #DA5D03;
+          border-color: #DA5D03;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: #6B7C91;
+        border-bottom: 1px solid transparent;
+        transition: border-color .4s ease, color .4s ease;
+      }
+    }
+  }
+}
+
+.blog-article {
+  max-width: 1010px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+
+  &__img {
+    max-width: 1216px;
+    margin: 0 auto 70px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    clip-path: border-box;
+  }
+
+  img {
+    margin: 40px 0;
+  }
+
+  p {
+    color: #003375;
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+  }
+
+  a {
+    text-decoration: underline;
+    color: #003375;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #003375;
+    font-family: Gotham, sans-serif !important;
+    margin: 60px 0 20px;
+    font-weight: 700;
+    line-height: 1.3em;
+  }
+
+  h2 {
+    font-size: 36px;
+
+  }
+
+  ul {
+    margin-bottom: 16px;
+
+    li {
+      position: relative;
+      padding-left: 20px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #003375;
+
+      &::before {
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #003375;
+        position: absolute;
+        top: 10px;
+        left: 6px;
+        transition: background-color .4s ease;
+      }
+    }
+  }
+}
+
+.copy-btn {
+  background-color: transparent;
+  border: 1px solid #D0D5DD;
+  border-radius: 8px;
+  padding: 10px 16px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+
+  &__tooltip {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    // width: 100%;
+    background-color: rgba(#000, .7);
+    padding: 5px 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 8px;
+    transform: translate(-50%, 0%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .2s ease;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 9px;
+  }
+}
+
+.share-social {
+  background-color: transparent;
+  border: 1px solid #D0D5DD;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: border-color .4se ease;
+
+  &:hover {
+    border-color: #003375;
+
+    svg {
+      fill: #003375;
+    }
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: #98A2B3;
+    transition: fill .4s ease;
+  }
+}
+
+.share-article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  border-top: 1px solid #EAECF0;
+  margin-top: 60px;
+
+  p {
+    color: #667085;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 12px;
   }
 }
