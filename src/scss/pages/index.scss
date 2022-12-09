@@ -1,3 +1,9 @@
+.main-wrapper {
+  @include d(767) {
+    padding-top: 80px;
+  }
+}
+
 .blog-hero {
   padding: 24px 0 120px;
   font-family: Gotham, sans-serif;
@@ -437,7 +443,7 @@
     flex-wrap: wrap;
     margin-bottom: 105px;
 
-    @include d(1280) {
+    @include d(1023) {
       margin-bottom: 80px;
     }
 
@@ -471,7 +477,7 @@
 .blog-cta {
   padding-bottom: 130px;
 
-  @include d(1280) {
+  @include d(1023) {
     padding-bottom: 80px;
   }
 
@@ -595,6 +601,8 @@
       line-height: 20px;
       font-weight: 700;
 
+
+
       &:not(:last-child) {
         padding-right: 12px;
         margin-right: 24px;
@@ -604,6 +612,23 @@
           position: absolute;
           right: -12px;
           color: #D0D5DD;
+        }
+      }
+
+      a {
+
+        svg {
+          width: 20px;
+          height: 19px;
+          stroke: #667085;
+          transition: stroke .4s ease;
+          margin-top: 1px;
+        }
+
+        &:hover {
+          svg {
+            stroke: #DA5D03;
+          }
         }
       }
 
@@ -934,6 +959,10 @@
 
 .blog-subscribe {
   padding: 120px 0;
+
+  @include d(1023) {
+    padding: 60px 0;
+  }
 
   &__inner {
     text-align: center;

@@ -13,8 +13,8 @@ const path = {
   },
   src: {
     html: `${devFolder}/*.html`,
-    css: `${devFolder}/scss/style.scss`,
-    js: `${devFolder}/js/script.js`,
+    css: `${devFolder}/scss/blog.scss`,
+    js: `${devFolder}/js/blog.js`,
     img: `${devFolder}/img/**/*.{jpg,png,svg,gif,ico,webp}`,
     fonts: `${devFolder}/fonts/*.ttf`,
   },
