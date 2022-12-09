@@ -121,7 +121,7 @@
             }
           }
 
-          h3 {
+          a {
             font-size: 32px;
             line-height: 1.05em !important;
 
@@ -167,7 +167,7 @@
             }
           }
 
-          h3 {
+          a {
             font-size: 20px;
             line-height: 1.05em !important;
 
@@ -221,7 +221,7 @@
             }
           }
 
-          h3 {
+          a {
             font-size: 20px;
             line-height: 1.05em !important;
 
@@ -277,7 +277,7 @@
       margin-bottom: 32px;
     }
 
-    h3 {
+    a {
       font-size: 24px;
       color: #24336A;
       font-family: Gotham, sans-serif !important;
@@ -286,6 +286,7 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis;
+      font-weight: 700;
     }
 
     p {
