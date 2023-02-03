@@ -18,3 +18,33 @@ $('.table-of-content-list li a[href^="#"]').on('click', function (e) {
     scrollTop: $($(this).attr('href')).offset().top
   }, 800);
 });
+
+const showCustomerMenu = () => {
+  const menu = document.querySelector('.blog-posts');
+  const wrapper = document.querySelector('.blog-single');
+  let bottomValue = 800;
+  if (menu) {
+    window.addEventListener("scroll", scrolling, false);
+
+    function isFullyVisible(el) {
+      let elementBoundary = el.getBoundingClientRect();
+      let bottom = elementBoundary.bottom;
+      return bottom >= bottomValue;
+    }
+
+    function scrolling() {
+      if (isFullyVisible(wrapper)) {
+        menu.classList.add('active');
+      } else {
+        menu.classList.remove('active');
+      }
+    }
+
+    scrolling();
+  }
+};
+
+if (window.innerWidth > 1199) {
+  showCustomerMenu()
+  document.querySelector('.blog-posts').classList.add('active')
+}
