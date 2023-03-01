@@ -12,12 +12,12 @@ const copyBlogLink = () => {
 copyBtn.addEventListener('click', copyBlogLink);
 
 
-$('.table-of-content-list li a[href^="#"]').on('click', function (e) {
-  e.preventDefault();
-  $('html, body').animate({
-    scrollTop: $($(this).attr('href')).offset().top
-  }, 800);
-});
+// $('.table-of-content-list li a[href^="#"]').on('click', function (e) {
+//   e.preventDefault();
+//   $('html, body').animate({
+//     scrollTop: $($(this).attr('href')).offset().top
+//   }, 800);
+// });
 
 const showCustomerMenu = () => {
   const menu = document.querySelector('.blog-posts');

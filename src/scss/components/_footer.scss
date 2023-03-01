@@ -3,8 +3,20 @@
   background-color: #082447;
   color: #EAECF0;
 
+  .container {
+    max-width: 1312px;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: content-box;
+  }
+
   a {
     color: #EAECF0;
+    text-decoration: initial;
+  }
+
+  ul {
+    list-style: none;
   }
 
   &-top {
@@ -67,16 +79,21 @@
           }
 
           input {
-            padding: 10px 14px;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 24px;
+            padding: 12px 18px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 14px;
             background-color: #fff;
             color: #667085;
             width: 280px;
+            border-radius: 47px;
+            box-sizing: border-box;
             height: 44px;
-            border-radius: 8px;
             border: none;
+
+            &:focus-visible {
+              outline: initial;
+            }
 
             @include d(575) {
               width: 100%;
@@ -90,15 +107,16 @@
         }
 
         input[type='submit'] {
-          background-color: yellow;
           border: none;
-          border-radius: 8px;
+          padding: 12px 18px;
+          border-radius: 47px;
           color: #fff;
           background-color: #DA5D03;
           text-align: center;
-          font-weight: 400;
+          font-weight: 500;
           font-size: 14px;
-          height: 40px;
+          height: 44px;
+          line-height: 14px;
 
           @include d(575) {
             height: 44px;
@@ -127,6 +145,10 @@
     &__col {
       margin-right: 50px;
 
+      > ul {
+        padding: initial;
+      }
+
       @include d(1280) {
         margin-right: 30px;
       }
@@ -148,10 +170,10 @@
 
       &:first-child {
         max-width: 278px;
-        margin-right: 80px;
+        margin-right: auto;
 
         @include d(1280) {
-          margin-right: 30px;
+          margin-right: auto;
         }
 
         @include d(992) {
@@ -212,6 +234,10 @@
         order: 1;
       }
 
+      > ul {
+        padding: initial;
+      }
+
       p {
         color: #F8F8F8;
         margin-bottom: 16px;
@@ -244,6 +270,7 @@
     &__social {
       display: flex;
       align-items: center;
+      margin: 0 0 0 30px;
 
       a {
         svg {
